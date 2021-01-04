@@ -11,8 +11,18 @@ currencies = data['rates']
 
         
 def convert_currency(from_currency, to_currency, amount): 
+    """[Convert Money from Currency to another ]
+
+    Args:
+        from_currency ([str]): [currency that you want to convert]
+        to_currency ([str]): [The result currency you want to get]
+        amount ([float]): [Amount of currency that you want to convert]
+
+    Returns:
+        [float]: [amount of The result currency you wanted to get ]
+    """
     try:
-        initial_amount = amount 
+        # checking from_currency if is the same with base currency (USD)
         if from_currency != base_currency: 
             amount = amount / currencies[from_currency] 
 
