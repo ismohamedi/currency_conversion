@@ -1,4 +1,4 @@
-# currency_conversion
+# convert currency
 For Python developers just take the code and modify to fit your program needs
 
 All Supported Currencies
