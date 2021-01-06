@@ -10,8 +10,13 @@ data= requests.get(url).json()
 currencies = data['rates']
 
         
-def convert_currency(from_currency, to_currency, amount): 
-    """[Convert Money from Currency to another ]
+def convert_currency(request):
+    data = request.json()
+    print(data)
+    from_currency = data['from_currency']
+    to_currency = request.query_params['to_currency']
+    amount =  request.query_params['amount']
+    """[Convert Money from Currency to another]
 
     Args:
         from_currency ([str]): [currency that you want to convert]
